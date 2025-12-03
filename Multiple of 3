@@ -1,0 +1,18 @@
+package Acharya.classes;
+
+public class MultiplesOfThree {
+    public static void main(String[] args) {
+        int[] arr = {3, 5, 9, 12, 14, 7};  // sample array
+        int count = 0;
+
+        for (int num : arr) {
+            if (num % 3 == 0) {
+                count++;
+            }
+        }
+
+        System.out.println("Number of elements divisible by 3: " + count);
+    }
+
+
+	}
