@@ -1,0 +1,23 @@
+package com.Acharya.college;
+
+public class MethodDemo {
+
+	public static void main(String[] args) {
+		boolean value = MethodDemo.canVote(16);
+		if(value)
+			System.out.println("Can Vote");
+		else
+			System.out.println("Cannot Vote");
+
+	}
+	public static boolean canVote(int age) {
+		if(age>18) {
+			return true;
+		}
+		else {
+			return false;
+
+	}
+
+}
+}
