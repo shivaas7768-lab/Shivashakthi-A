@@ -1,0 +1,48 @@
+package year;
+
+class Employee2 {
+    protected int id;
+    protected String name;
+    protected double salary;
+
+    public Employee2(int id, String name, double salary) {
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+    }
+
+    public double computeSalary() {
+        return salary;
+    }
+}
+class SalesPerson extends Employee2{
+    private int target;
+    private double incentive;
+
+    public SalesPerson(int id, String name, double salary, int target, double incentive) {
+        super(id, name, salary);
+        this.target = target;
+        this.incentive = incentive;
+    }
+
+    @Override
+    public double computeSalary() {
+        if (target >= 100) {
+            return salary + incentive;
+        }
+        return salary;
+    }
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		SalesPerson sp1 = new SalesPerson(1, "Ravi", 30000, 120, 5000);
+		SalesPerson sp2 = new SalesPerson(2, "Sita", 30000, 80, 5000);
+
+        System.out.println("SalesPerson 1 Salary: " + sp1.computeSalary());
+        System.out.println("SalesPerson 2 Salary: " + sp2.computeSalary());
+
+	}
+
+}
